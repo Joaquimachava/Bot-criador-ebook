@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bot Criador de Ebook</title>
+</head>
+<body>
+    <h1>Bot Criador de Ebook</h1>
+    <form method="post">
+        <label for="tema">Tema do Ebook:</label><br>
+        <input type="text" id="tema" name="tema" required><br><br>
+        <input type="submit" value="Gerar Ebook">
+    </form>
+    <hr>
+    <div>
+        <h2>Ebook Gerado:</h2>
+        <pre>{{ ebook }}</pre>
+    </div>
+</body>
+</html>
