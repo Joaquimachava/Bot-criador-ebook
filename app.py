@@ -18,8 +18,9 @@ def index():
             messages=[{"role": "user", "content": prompt}],
             max_tokens=2000
         )
-        ebook = response["choices"][0]["message"]["content"]
+        ebook = response.choices[0].message.content
     return render_template("index.html", ebook=ebook)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
